@@ -1,0 +1,9 @@
+version: 2.1
+orbs:
+  docker: circleci/docker@1.7.0
+workflows:
+  build-push-docker:
+    jobs:
+      - docker/publish:
+          image: leonpatmore/kafka-cli:latest
+          update-description: true
