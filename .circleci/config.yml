@@ -5,5 +5,6 @@ workflows:
   build-push-docker:
     jobs:
       - docker/publish:
-          image: leonpatmore/kafka-cli:latest
+          image: leonpatmore/kafka-cli
+          tag: $CIRCLE_SHA1,latest
           update-description: true
